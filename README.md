@@ -10,9 +10,9 @@ https://forum.allaboutcircuits.com/blog/school-study-hudson-river-the-river-that
 
 This repositor has a number of sub-projects.  Below is a list of the overall files.
 
-- server/ - Contains the Golang code running on AWS lambda to process incoming requests.
-- xbee/ - Contains the microPython loaded up on the XBee3 Cellular Module.
-- certs.* - THe encrypted certs used to self-sign all TLS communications betwee xbee and server.
+- server/ - Golang code running on AWS lambda to process incoming requests.
+- xbee/ - MicroPython code for the XBee3 Cellular Module.
+- certs.* - Encrypted certs used to self-sign all TLS communications betwee xbee and server.
 - Makefile - Used to build the entire or a portion of the sub-projects.
 
 # Building
