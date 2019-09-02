@@ -22,11 +22,11 @@ We will be connecting all sensors and GPS devices directly to the XBee module fo
 
 For the type of sensors and GPS, and how they be used, please refer to the diagrams below.
 
-Schema
+### Schema
 
 ![XBee Schema](https://raw.githubusercontent.com/eduncan911/hudsonriver-monitor/master/diagrams/hudsonriver-schema.png)
 
-Breadboard
+### Breadboard
 
 ![XBee Breadboard](https://raw.githubusercontent.com/eduncan911/hudsonriver-monitor/master/diagrams/hudsonriver-monitor-breadboard.png)
 
