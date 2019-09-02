@@ -30,11 +30,14 @@ gps_reads = 10
 #     time as the GPS can take some time to get a stable lock.
 #
 
+# to keep things on the heap, we'll define vars globally
 xb = xbee.XBee()
+readings = ("n/a", "n/a", "n/a")
+location = ("lat", "long", "alt")
 
 while True:
     with xb.wake_lock:
-        readings - sensors.read()
+        readings = sensors.read()
         print("readings: " + readings)
 
         location = gps.read(gps_reads)
@@ -44,7 +47,6 @@ while True:
         print("send readings and locations")
 
     # all done. now sleep
-    sleep_time = sleep_in_minutes * 60 * 1000
-    print("sleeping for %u ms" % sleep_time)
+    print("sleeping for %u ms" % sleep_in_minutes * 60 * 1000)
     slept = x.sleep_now(sleep_time, False)
     print("slept for %u ms" % slept)
