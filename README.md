@@ -2,7 +2,7 @@
 
 This is an educational project we are building to introduce the kids at a local school to electronics.
 
-For overall project information, plesae refer to this blog post: 
+For overall project information, please refer to the build log and instructions here: 
 
 https://forum.allaboutcircuits.com/blog/school-study-hudson-river-the-river-that-flows-both-ways.1594/
 
