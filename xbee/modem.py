@@ -1,5 +1,3 @@
-# Copyright (c) 2019 Eric Duncan (eduncan911@gmail.com)
-# The MIT License (MIT) - see https://eduncan911.mit-license.org
 """XBee modem communications"""
 
 def send(xb, location, readings, timeout=30):

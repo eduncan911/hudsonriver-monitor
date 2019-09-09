@@ -8,4 +8,4 @@ This is the main program that gets executed.  It is recommended to start here.
 
 ## `requirements.txt`
 
-These are not used by MicroPython nor the XBee module; but instead, they are used for setting up a local laptop for develpoment.  Such as `pip`, `pylint`, etc.
+These are not used by MicroPython nor the XBee module; but instead, they are used for setting up a local laptop for development.  Such as `pip`, `pylint`, etc.
