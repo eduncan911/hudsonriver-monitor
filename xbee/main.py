@@ -1,11 +1,12 @@
-"""
 # Copyright (c) 2019 Eric Duncan (eduncan911@gmail.com)
 # The MIT License (MIT) - see https://eduncan911.mit-license.org
-"""
-from machine import Pin
+"""Main program entry"""
+
+import machine
 import time
 import xbee
 import gps
+import modem
 import sensors
 
 # Theory of Operation - We will go into a loop and will read
@@ -21,7 +22,7 @@ import sensors
 #
 
 # configuration
-sleep_in_minutes = 30
+sleep_in_minutes = 1
 gps_reads = 10
 
 # TODO:
@@ -37,16 +38,16 @@ location = ("lat", "long", "alt")
 
 while True:
     with xb.wake_lock:
-        readings = sensors.read()
+        readings = sensors.read(xb)
         print("readings: " + readings)
 
-        location = gps.read(gps_reads)
+        location = gps.read(xb, gps_reads)
         print("location: " + location)
 
-        modem.send(location, readings)
-        print("send readings and locations")
+        modem.send(xb, location, readings)
+        print("sent readings and locations")
 
     # all done. now sleep
-    print("sleeping for %u ms" % sleep_in_minutes * 60 * 1000)
-    slept = x.sleep_now(sleep_time, False)
-    print("slept for %u ms" % slept)
+    print("sleeping for %u minutes" % sleep_in_minutes)
+    slept = xb.sleep_now(sleep_in_minutes * 60 * 1000, False)
+    print("WAKE UP: slept for %u ms" % slept)

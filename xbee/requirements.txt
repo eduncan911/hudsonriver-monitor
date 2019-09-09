@@ -1,0 +1,2 @@
+digi-xbee==1.2.0
+micropy-cli==2.1.1
