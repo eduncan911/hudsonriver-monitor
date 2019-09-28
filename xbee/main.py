@@ -31,19 +31,19 @@ gps_reads = 10
 
 # to keep things on the heap, we'll define vars globally
 xb = xbee.XBee()
-readings = ("n/a", "n/a", "n/a")
-location = ("lat", "long", "alt")
+readings = {}
+location = {}
 
 while True:
     with xb.wake_lock:
         readings = sensors.read(xb)
         print("readings: " + readings)
 
-        location = gps.read(xb, gps_reads)
-        print("location: " + location)
+        #location = gps.read(xb, gps_reads)
+        #print("location: " + location)
 
-        modem.send(xb, location, readings)
-        print("sent readings and locations")
+        #modem.send(xb, location, readings)
+        #print("sent readings and locations")
 
     # all done. now sleep
     print("sleeping for %u minutes" % sleep_in_minutes)

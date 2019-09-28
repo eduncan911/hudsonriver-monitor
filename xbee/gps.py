@@ -8,4 +8,4 @@ def read(xb, gps_reads=10, timeout=10):
     gps_reads: number of inputs to average.
     timeout: seconds before giving up"""
 
-    return ("lat", "long", "alt")
+    return {}
