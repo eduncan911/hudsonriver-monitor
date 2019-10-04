@@ -35,6 +35,9 @@ readings = {}
 location = {}
 
 while True:
+    global readings
+    global location
+
     with xb.wake_lock:
         readings = sensors.read(xb)
         print("readings: " + readings)
